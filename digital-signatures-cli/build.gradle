@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+dependencies {
+    implementation project(':digital-signatures')
+    implementation 'commons-cli:commons-cli:1.3.1'
+
+    testImplementation 'com.github.stefanbirkner:system-rules:1.19.0' // System.* @Rules for JUnit
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.transferwise.digitalsignatures.cli.Main'
+    }
+}
+
+project.tasks.assemble.dependsOn project.tasks.shadowJar

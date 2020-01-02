@@ -1,0 +1,4 @@
+rootProject.name = 'digital-signatures-root'
+include 'digital-signatures-cli'
+include 'digital-signatures'
+
