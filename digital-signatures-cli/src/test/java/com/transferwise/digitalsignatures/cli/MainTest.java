@@ -19,7 +19,10 @@ import static org.junit.Assume.assumeThat;
 public class MainTest {
 
     private static final String DATA_TO_SIGN = "65a31b86-aa2e-47fd-a7a4-3710437ba270";
-    private static final String SIGNATURE = "oMbriRqpykbUnoL2sIX5xCO/yhrpZFd4TDu2lWdbcHkfxoYHQIvjdm/Px9SBgO5Lc58qjPkmeJA4z8B8spOVaxLRienkzvqrT0I11OFH7jJkoMu2g8bxPe7hmnRDdTB8cLZyFYGmlYjsr3vxemTUWSYYXdrys5Dh3LuOzWZmuYQ3bOwsBPm2sl7K39QM2KqXWckyqg9xpguWIGWzO86aKc/OboWqompVYKztLtdzMwAT5WQ5tPH+AA/lpiV3VG8J9TKTYpUzcrsRjUIelY+jznOkrFtqyyQsZ6l/G7yFXYTaA55ARc+k7CJExiw4mFX8wgPUHrGt289170HS+UJZDw==";
+    private static final String SIGNATURE = "1JnHvXd24R99jZFl5KzJer1iMFGIdrGRmu09h7QkGzo5kgk3cLHdDesitNjK131lmpgAEwnI" +
+            "99jtyfJfiMjFZV4VqSAmr68W12r3Jc4ACE17WNa7hGgLC7Gw+m70x9UX5dgv6ws02VlIe9i44iGJ6fN57Piy5LBitxWkAjEEMNjmqO6G" +
+            "dnBlxNuSc9m+eImG91nqXa6BLNFFAPD3FzaEbqW8Ob/l8ayd9xXosTNMz0ywsV/l/zthra/7olAvRLqCrMtzI9ltC7kd40xWNesehLxf" +
+            "QIIoAUiDF9iRCzBavXR6O7jUf56QES6ScjQ43a62V0JIdbUDSdRJPr+zesPQug==";
 
     private static final long OPENSSL_TEST_TIMEOUT_MILLISECONDS = 1000;
 
@@ -56,7 +59,7 @@ public class MainTest {
 
         Process process;
         try {
-            String command = String.format("printf '%s' | openssl sha1 -sign %s | base64 -b 0", DATA_TO_SIGN, testPrivateKeyFilePath);
+            String command = String.format("printf '%s' | openssl sha256 -sign %s | base64 -b 0", DATA_TO_SIGN, testPrivateKeyFilePath);
             process = new ProcessBuilder("/bin/sh", "-c", command).start();
         } catch (Exception e) {
             assumeNoException(e);

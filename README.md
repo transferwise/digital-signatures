@@ -40,7 +40,7 @@ String signatureBase64 = DigitalSignatires.encodeToBase64(byte[] bytes);
 To allow users to sign their data via CLI there is an executable JAR:
 ```bash
 usage: java -jar digital-signatures-cli-<version>-all.jar -d <DATA> -k <PATH>
-Calculates SHA1 with RSA signature in Base64 encoding for provided data
+Calculates SHA256 with RSA signature in Base64 encoding for provided data
  -d,--data-to-sign <DATA>       String containing data to sign
  -k,--private-key-file <PATH>   Path to file containing RSA private key
 ```

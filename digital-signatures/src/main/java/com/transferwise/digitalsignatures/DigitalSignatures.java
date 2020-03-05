@@ -29,7 +29,7 @@ public class DigitalSignatures {
     /**
      * Default signature algorithm.
      */
-    public static final String SIGNATURE_ALGORITHM = "SHA1withRSA";
+    public static final String SIGNATURE_ALGORITHM = "SHA256withRSA";
 
     static {
         Security.addProvider(new BouncyCastleProvider());

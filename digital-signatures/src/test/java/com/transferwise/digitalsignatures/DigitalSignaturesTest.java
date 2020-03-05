@@ -40,7 +40,10 @@ public class DigitalSignaturesTest {
     @Test
     public void sign() throws IOException, GeneralSecurityException {
         String dataToSign = "65a31b86-aa2e-47fd-a7a4-3710437ba270";
-        String expectedSignatureBase64 = "oMbriRqpykbUnoL2sIX5xCO/yhrpZFd4TDu2lWdbcHkfxoYHQIvjdm/Px9SBgO5Lc58qjPkmeJA4z8B8spOVaxLRienkzvqrT0I11OFH7jJkoMu2g8bxPe7hmnRDdTB8cLZyFYGmlYjsr3vxemTUWSYYXdrys5Dh3LuOzWZmuYQ3bOwsBPm2sl7K39QM2KqXWckyqg9xpguWIGWzO86aKc/OboWqompVYKztLtdzMwAT5WQ5tPH+AA/lpiV3VG8J9TKTYpUzcrsRjUIelY+jznOkrFtqyyQsZ6l/G7yFXYTaA55ARc+k7CJExiw4mFX8wgPUHrGt289170HS+UJZDw==";
+        String expectedSignatureBase64 = "1JnHvXd24R99jZFl5KzJer1iMFGIdrGRmu09h7QkGzo5kgk3cLHdDesitNjK131lmpgAEwnI99j" +
+                "tyfJfiMjFZV4VqSAmr68W12r3Jc4ACE17WNa7hGgLC7Gw+m70x9UX5dgv6ws02VlIe9i44iGJ6fN57Piy5LBitxWkAjEEMNjmqO6" +
+                "GdnBlxNuSc9m+eImG91nqXa6BLNFFAPD3FzaEbqW8Ob/l8ayd9xXosTNMz0ywsV/l/zthra/7olAvRLqCrMtzI9ltC7kd40xWNes" +
+                "ehLxfQIIoAUiDF9iRCzBavXR6O7jUf56QES6ScjQ43a62V0JIdbUDSdRJPr+zesPQug==";
 
         byte[] signature = DigitalSignatures.sign(PRIVATE_KEY, dataToSign.getBytes());
 
