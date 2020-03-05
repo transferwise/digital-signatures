@@ -15,7 +15,7 @@ import java.nio.file.Paths;
 class Main {
 
     private static final String CLI_UTILITY_NAME = "java -jar digital-signatures-cli-<version>-all.jar";
-    private static final String CLI_HELP_HEADER = "Calculates SHA1 with RSA signature in Base64 encoding (RFC 4648) for provided data";
+    private static final String CLI_HELP_HEADER = "Calculates SHA256 with RSA signature in Base64 encoding (RFC 4648) for provided data";
 
     public static void main(String[] args) {
         Option privateKeyFilePathOption = Option.builder("k")
